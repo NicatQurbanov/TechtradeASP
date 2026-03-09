@@ -1,0 +1,77 @@
+﻿
+
+.section__container {
+    padding: 25px;
+}
+
+.section__header {
+    margin-bottom: 30px;
+}
+
+.section-three {
+    display: flex;
+    align-items: center;
+}
+
+.section-three__grid-container {
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.section-three__lists {
+    width: unset;
+    height: 275px;
+}
+
+.section-four {
+    align-items: end;
+    z-index: 1;
+    position: relative;
+}
+
+    .section-four svg {
+        position: absolute;
+        left: -100px;
+    }
+
+.section__header {
+    text-align: left;
+}
+
+.section__subheader {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.section-five li {
+    margin-bottom: 30px;
+}
+
+.section-six {
+    display: flex;
+    align-items: center;
+}
+
+    .section-six .section__container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .section-six .section__container svg, .section-six .section__container > ul {
+            width: 50%;
+        }
+
+.visitcard {
+    width: 230px;
+    height: auto;
+    background-color: #35A6B4;
+    color: white;
+    padding: 10px;
+}

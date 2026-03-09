@@ -1,0 +1,87 @@
+* {
+    font-family: "Questrial", sans-serif;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.navbar {
+    background-color: lightgray;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.card {
+    height: 500px;
+    border-radius: 10px;
+}
+
+    .card > ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr repeat(4, 1fr);
+        height: 100%;
+    }
+
+.card-info-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+.close-btn {
+    position: absolute;
+    right: 0;
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+    .close-btn:hover {
+        background-color: darkslategray;
+        border: none;
+    }
+
+i {
+    transform: scale(2);
+}
+
+.image-container {
+    justify-content: center;
+}
+
+.image {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    object-position: top;
+}
+
+footer {
+    height: 50px;
+    background-color: lightgrey
+}

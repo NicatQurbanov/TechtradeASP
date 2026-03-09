@@ -1,0 +1,37 @@
+﻿main {
+    display: grid;
+    grid-template-rows: 700px 600px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "sec1"
+        "sec2";
+}
+
+.section-two {
+    background-color: #F0F0F0;
+}
+
+.section-one {
+    background-color: white;
+    justify-content: center;
+}
+
+.section-two p {
+    text-align: center;
+}
+
+.section__container {
+    width: 40%;
+}
+
+.paragraph-bold {
+    margin-bottom: 100px;
+}
+
+.icons-container p {
+    font-size: 18px;
+}
+
+input[type="file"] {
+    display: none;
+}

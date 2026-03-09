@@ -1,0 +1,21 @@
+﻿
+$mainColor: #35A6B4;
+$secondColor: #434343;
+$fontFamily: Poppins, sans-serif;
+$border: 2px solid $secondColor;
+
+
+@mixin secContainer {
+    width: 81%;
+    margin: 0 auto;
+}
+
+@mixin dispFlexGrid($display, $align-items, $justify-content) {
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin marginTop {
+    margin-top: 20px;
+}

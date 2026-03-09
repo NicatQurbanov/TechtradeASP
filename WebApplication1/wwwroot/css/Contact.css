@@ -1,0 +1,57 @@
+﻿main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 700px 900px;
+    grid-template-areas:
+        "sec1"
+        "sec6";
+    overflow-x: hidden;
+}
+
+
+.section-six__svg-container svg {
+    position: absolute;
+    right: 60px;
+    top: 1200px;
+}
+
+.section-one {
+    background-color: white;
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin-top: -100px;
+}
+
+
+.contacts__container .icons-container {
+    justify-content: start;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.icons-container:nth-of-type(4) {
+    width: 50%;
+    margin: 50px auto 0;
+    justify-content: space-between;
+}
+
+
+
+.icons-container p {
+    font-weight: 500;
+}
+
+i {
+    transform: scale(1.5);
+}
+
+.contacts__container {
+    position: absolute;
+    background-color: white;
+    width: 370px;
+    height: 460px;
+    left: 800px;
+    border-radius: 10px;
+    padding: 50px 30px;
+}

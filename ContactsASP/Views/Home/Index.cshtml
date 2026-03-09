@@ -1,0 +1,34 @@
+﻿@using ContactsASP
+
+@section IndexCSS {
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+}
+
+@model List<Contact>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section mainNavBar {
+    @await Html.PartialAsync("../Partials/_indexNav")
+}
+
+@foreach (Contact c in Model)
+{
+   <li class="card">
+    <ul>
+        <li class="image-container card-info-container">
+            <img src="@c.ImageURL" alt="" class="image">
+        </li>
+        <li class="card-info-container">
+            <p>Name:</p>
+            <p class="name">@c.Name</p>
+        </li>
+        <li class="card-info-container">
+                <p class="name"><a asp-action="Contact" asp-route-id="@c.ID" asp-controller="Home" >Additional information</a></p>
+        </li>
+    </ul>
+   </li>
+}
+

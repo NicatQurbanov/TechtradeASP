@@ -1,0 +1,38 @@
+﻿@using ContactsASP;
+
+@model Contact;
+
+@section navbar {
+    @await Html.PartialAsync("../Partials/_nav")
+}
+
+<form class="w-25 mt-4 ms-3" method="post" enctype="multipart/form-data">
+
+@*<div asp-validation-summary="All" class="text-danger"></div>*@
+
+    <div class="mb-3">
+            <label asp-for="ImageURL" class="form-label">Image:</label>
+            <input type="file" class="form-control" asp-for="ImageURL">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Name:</label>
+        <input asp-for="Name" class="form-control" aria-describedby="emailHelp">
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Surname" class="form-label">Surname:</label>
+        <input asp-for="Surname" class="form-control">
+        <span asp-validation-for="Surname"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email:</label>
+        <input asp-for="Email" class="form-control">
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label">Phone:</label>
+        <input asp-for="Phone" class="form-control">
+        <span asp-validation-for="Phone"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

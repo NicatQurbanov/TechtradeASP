@@ -1,0 +1,56 @@
+﻿main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 700px) 70px;
+    grid-template-areas:
+        "sec1 sec2"
+        "sec3 sec4"
+        "sec5 sec6";
+}
+
+.section-six, .section-three, .section-two {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.section-three {
+    left: 150px;
+}
+
+.section-two, .section-six {
+    left: 50px;
+}
+
+
+    .section-two .svg::after, .section-six .svg::after {
+        position: absolute;
+        border: 2px solid black;
+        content: '';
+        z-index: -1;
+        width: 100%;
+        top: 20px;
+        left: 20px;
+        height: 600px;
+    }
+
+.svg {
+    position: absolute;
+}
+
+.section-three .svg::after {
+    position: absolute;
+    border: 2px solid black;
+    width: 100%;
+    z-index: -1;
+    content: '';
+    height: 600px;
+    top: 10px;
+    left: -30px;
+}
+
+
+.section__container {
+    width: 86%;
+    margin-bottom: 100px;
+}

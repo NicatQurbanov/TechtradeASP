@@ -1,0 +1,45 @@
+﻿@using ContactsASP;
+
+@section IndexCSS {
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+}
+
+@section navbar {
+    @await Html.PartialAsync("../Partials/_nav")
+}
+
+@model Contact
+
+@{
+    var url = Url.Content("~/" + Model.ImageURL); 
+}
+
+<li class="card">
+    <ul>
+        <li class="image-container card-info-container">
+            <img src="@url" alt="" class="image">
+        </li>
+        <li class="card-info-container">
+            <p>Name:</p>
+            <p class="name">@Model.Name</p>
+        </li>
+        <li class="card-info-container">
+            <p>Surname:</p>
+            <p class="surname">@Model.Surname</p>
+        </li>
+        @if (Model.Email != null)
+        {
+            <li class="card-info-container">
+                <p>Email:</p>
+                <p class="activity">@Model.Email</p>
+            </li>
+        }
+        @if (Model.Phone != null)
+        {
+            <li class="card-info-container">
+                <p>Number:</p>
+                <p class="birth-year">@Model.Phone</p>
+            </li>
+        }
+    </ul>
+</li>

@@ -1,0 +1,11 @@
+﻿@model int;
+
+@section IndexCSS {
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+}
+
+@section navbar {
+    @await Html.PartialAsync("../Partials/_nav")
+}
+
+<p class="text-center">User @Model Not Found</p>
